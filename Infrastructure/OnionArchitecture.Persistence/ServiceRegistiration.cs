@@ -14,6 +14,7 @@ namespace OnionArchitecture.Persistence
     {
         public static void AddPersistenceServices(this IServiceCollection services,IConfiguration configuration )
         {
+
             //burada microsoft.extensions.configuration.json dan da yararlanılabilir eğer ki daha fazla konfigürasyon gerekecekse
             services.AddDbContext<OnionArchitectureDbContext>(options=>options.UseSqlServer(configuration.GetConnectionString("MsSql")));
         }
